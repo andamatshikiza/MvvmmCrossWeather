@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<TextView
+		android:id="@+id/tvCityName"
+		android:layout_width="322dp"
+		android:layout_height="55dp"
+		android:layout_marginBottom="0.0dp"
+		android:layout_marginEnd="8dp"
+		android:layout_marginLeft="8dp"
+		android:layout_marginRight="8dp"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="0.0dp"
+		android:textSize="18sp"
+		android:textStyle="bold"
+	    local:MvxBind="Text CityName"/>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="50.5dp"
+		android:layout_marginBottom="0.0dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginTop="0.0dp">
+		<ffimageloading.cross.MvxCachedImageView
+			android:layout_width="42.0dp"
+			android:layout_height="46dp"
+			android:layout_marginBottom="0dp"
+			android:layout_marginEnd="0dp"
+			android:layout_marginLeft="55.0dp"
+			android:layout_marginRight="0.0dp"
+			android:layout_marginStart="0dp"
+			android:layout_marginTop="0dp"
+			android:id="@+id/weatherIcon"
+		    local:MvxBind="ImagePath IconUrl"/>
+		<TextView
+			android:id="@+id/tvTemperature"
+			android:layout_width="match_parent"
+			android:layout_height="52dp"
+			android:layout_marginBottom="0.0dp"
+			android:layout_marginEnd="0dp"
+			android:layout_marginLeft="0dp"
+			android:layout_marginRight="20dp"
+			android:layout_marginStart="0dp"
+			android:layout_marginTop="0dp"
+			android:textSize="26sp"
+			android:textStyle="bold"
+		    local:MvxBind="Text Temperature" />
+	</LinearLayout>
+	<TextView
+		android:id="@+id/tvDateTime"
+		android:layout_width="326dp"
+		android:layout_height="58dp"
+		android:layout_marginBottom="8dp"
+		android:layout_marginLeft="8dp"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="8dp"
+		android:textSize="13sp"
+	    local:MvxBind="Text Description" />
+	<MvxListView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="5dp"
+		android:id="@+id/listDetails"
+		local:MvxBind="ItemsSource MyListItems"
+		local:MvxItemTemplate="@layout/details_columns" />
+	
+</LinearLayout>

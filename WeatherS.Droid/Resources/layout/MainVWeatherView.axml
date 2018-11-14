@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+		android:layout_marginTop="10.0dp"
+		  android:layout_marginLeft="10.0dp"
+		  android:layout_marginRight="50.0dp"
+          android:text="City" />
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="18sp"
+		local:MvxBind="Text City"
+		android:layout_marginLeft="10.0dp"
+		android:layout_marginRight="50.0dp" />
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="15.0dp"
+		android:backgroundTint="@color/colorPrimaryDark"
+		android:text="@string/btnGetWeatherText"
+		android:textColor="@color/whiteColor" 
+		local:MvxBind="Click MyCommand"/>
+</LinearLayout>
